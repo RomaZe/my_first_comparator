@@ -29,6 +29,10 @@ public class Records implements Comparable<Records> {
         return recordName;
     }
 
+    public String getStr1() {
+        return str1;
+    }
+
     private String generateRandomString(int length){
         String baseString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" + "0123456789" + "abcdefghijklmnopqrstuvxyz";
         StringBuilder str = new StringBuilder();

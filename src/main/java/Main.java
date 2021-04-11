@@ -22,11 +22,11 @@ public class Main {
         System.out.println();
 
         // Sort array of Records object
-        Records[] records = {rc1, rc2, rc3, rc4, rc5};
-        System.out.println("Not sorted Records: "+ Arrays.toString(records));
+        Records[] records = {rc1, rc3, rc5, rc2, rc4};
+        System.out.println("Not sorted Records    : "+ Arrays.toString(records));
 
         Arrays.sort(records);
-        System.out.println("Sorted Records    : "+ Arrays.toString(records));
+        System.out.println("Sorted Records        : "+ Arrays.toString(records));
         System.out.println();
 
         /* Find max and min object in array.
@@ -40,6 +40,12 @@ public class Main {
 
         System.out.print("Minimum Record from records array: ");
         System.out.println(records[0]);
+        System.out.println();
+
+        // Sort array with custom comparator
+        RecordNameCompare recordNameComparator = new RecordNameCompare();
+        Arrays.sort(records, recordNameComparator);
+        System.out.println("Sorted Records by name: "+ Arrays.toString(records));
         System.out.println();
 
     }
